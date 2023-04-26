@@ -1,0 +1,16 @@
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int c=0;
+        HashMap<Integer,Integer>h=new HashMap<Integer,Integer>();
+        for(int i=0;i<=nums.length-1;i++)
+        {
+            if(h.containsKey(nums[i]))
+                continue;
+            h.put(nums[i],1); 
+            nums[c]=nums[i]; 
+            c++;  
+        }
+        
+        return c;
+    }
+}
